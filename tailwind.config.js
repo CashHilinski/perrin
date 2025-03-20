@@ -14,10 +14,16 @@ module.exports = {
         display: ['var(--font-roboto-condensed)', 'system-ui', 'sans-serif'],
         body: ['var(--font-roboto-condensed)', 'system-ui', 'sans-serif'],
       },
+      colors: {
+        primary: "#1E3A8A", 
+        secondary: "#9333EA",
+      },
+      spacing: {
+        18: "4.5rem", 
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       animation: {
         'blink': 'blink 1s step-end infinite',
@@ -30,5 +36,8 @@ module.exports = {
       },
     },
   },
-  plugins: [],
-} 
+  plugins: [
+    require("@tailwindcss/typography"), 
+    require("@tailwindcss/forms")
+  ],
+};
